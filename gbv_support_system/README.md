@@ -100,3 +100,12 @@ It is **secure**, **user-friendly**, **modular**, and **expandable** for future 
 
 ## Future
 -Live locations if necessary
+
+mvn clean compile
+
+and then:
+
+mvn exec:java@rmi-server
+mvn exec:java@rmi-test
+
+You should see only the report-related output. Let me know if any issues remain!

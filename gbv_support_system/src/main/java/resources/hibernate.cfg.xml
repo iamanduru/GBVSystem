@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <!-- JDBC connection -->
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="connection.url">
+      jdbc:mysql://localhost:3306/gbv_support_system_db?useSSL=false&amp;serverTimezone=UTC
+    </property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">Hohnecker@143</property>
+
+    <!-- SQL dialect & logging -->
+    <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+
+    <!-- Auto-update schema -->
+    <property name="hbm2ddl.auto">update</property>
+
+    <!-- Entity mappings -->
+    <mapping class="model.Report"/>
+    <mapping class="model.EmergencyContact"/>
+    <mapping class="model.ReportCategory"/>
+    <mapping class="model.SupportService"/>
+    <mapping class="model.User"/>
+  </session-factory>
+</hibernate-configuration>
